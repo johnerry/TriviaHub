@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backround_home" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/firstScreen_Home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/trivia_hub" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:background="@drawable/oval_button"
+                    android:fontFamily="@font/finger_paint"
+                    android:text="Play"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="36sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_button"
+                    android:drawableTop="@drawable/ic_score"
+                    android:fontFamily="@font/finger_paint"
+                    android:padding="4dp"
+                    android:text="score"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_button"
+
+                    android:drawableTop="@drawable/ic_settings"
+                    android:fontFamily="@font/finger_paint"
+                    android:padding="4dp"
+
+                    android:text="settings"
+                    android:textAllCaps="false"
+
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondScreen_Score"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/finger_paint"
+                    android:text="Leaders Board"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="44sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/listLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="36dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.65"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/scoreBackButton"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="36dp"
+                    android:background="@drawable/curved_button"
+                    android:drawableLeft="@drawable/ic_back"
+                    android:fontFamily="@font/finger_paint"
+                    android:padding="8dp"
+                    android:text="back"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/thirdScreen_Settings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/finger_paint"
+                    android:text="Settings"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="44sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/finger_paint"
+                        android:text="Sound"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <Switch
+                            android:id="@+id/soundSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:checked="true"
+                            android:thumb="@drawable/curved_thumb"
+                            android:track="@drawable/curved_track" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/finger_paint"
+                        android:text="@string/music"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <Switch
+                            android:id="@+id/musicSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:checked="true"
+                            android:thumb="@drawable/curved_thumb"
+                            android:track="@drawable/curved_track" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/finger_paint"
+                        android:text="Timer"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <Spinner
+                        android:id="@+id/timerSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/settingsBackButton"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="36dp"
+                    android:background="@drawable/curved_button"
+                    android:drawableLeft="@drawable/ic_back"
+                    android:fontFamily="@font/finger_paint"
+                    android:padding="8dp"
+                    android:text="@string/back"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/fourthScreen_Player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom|center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="0.55"
+                    android:fontFamily="@font/finger_paint"
+                    android:text="@string/player"
+
+                    android:textColor="@color/white"
+                    android:textSize="36sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/previousPlayer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawableStart="@drawable/ic_left_arrow"
+                        android:minWidth="0dp" />
+
+                    <TextView
+                        android:id="@+id/selectedPlayer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:fontFamily="@font/finger_paint"
+                        android:text="No Player"
+                        android:textAlignment="center"
+                        android:textSize="26sp" />
+
+                    <Button
+                        android:id="@+id/nextPlayer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:background="@android:color/transparent"
+                        android:drawableStart="@drawable/ic_right_arrow"
+                        android:minWidth="0dp"
+                        android:textAllCaps="true"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:background="@drawable/oval_button"
+                    android:fontFamily="@font/finger_paint"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="36sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/playerBackButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_button"
+                    android:drawableLeft="@drawable/ic_back"
+                    android:fontFamily="@font/finger_paint"
+                    android:padding="8dp"
+                    android:text="back"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/addNewPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_button"
+                    android:drawableLeft="@drawable/ic_add_user"
+                    android:fontFamily="@font/finger_paint"
+                    android:padding="8dp"
+                    android:text="new"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fifthScreen_NewPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="vertical"
+                android:paddingTop="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/finger_paint"
+                    android:text="Player Name"
+                    android:textColor="@color/white"
+                    android:textSize="36sp" />
+
+                <EditText
+                    android:id="@+id/inputPlayerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="@color/green"
+                    android:fontFamily="@font/finger_paint"
+                    android:gravity="center"
+                    android:inputType="textNoSuggestions|textCapSentences"
+                    android:maxLength="8"
+                    android:textColor="@color/white"
+                    android:textCursorDrawable="@color/green"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/next2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:background="@drawable/oval_button"
+                    android:fontFamily="@font/finger_paint"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="36sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/newPlayerBackButton"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="36dp"
+                    android:background="@drawable/curved_button"
+                    android:drawableLeft="@drawable/ic_back"
+                    android:fontFamily="@font/finger_paint"
+                    android:padding="8dp"
+                    android:text="back"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sixthScreen_Category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="24dp"
+                android:layout_weight="2"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/finger_paint"
+                    android:text="Choose Category"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="36sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <Button
+                    android:id="@+id/technology"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:background="#BD3D3A"
+                    android:drawableLeft="@drawable/ic_technology"
+                    android:drawablePadding="0dp"
+                    android:fontFamily="@font/finger_paint"
+                    android:paddingLeft="4dp"
+                    android:text="TECHNOLOGY  (off)"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/sports"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:background="#fdc94f"
+                    android:drawableLeft="@drawable/ic_sport"
+                    android:drawablePadding="0dp"
+                    android:fontFamily="@font/finger_paint"
+                    android:paddingLeft="4dp"
+                    android:text="SPORTS  (off)"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/history"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:background="#3F69AA"
+                    android:drawableLeft="@drawable/ic_history"
+                    android:drawablePadding="0dp"
+                    android:fontFamily="@font/finger_paint"
+                    android:paddingLeft="4dp"
+                    android:text="HISTORY  (off)"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/entertainment"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:background="#006E51"
+                    android:drawableLeft="@drawable/ic_entertainment"
+                    android:drawablePadding="0dp"
+                    android:fontFamily="@font/finger_paint"
+                    android:paddingLeft="4dp"
+                    android:text="ENTERTAINMENT  (off)"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/random"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#E47A2E"
+                    android:drawableLeft="@drawable/ic_random"
+                    android:fontFamily="@font/finger_paint"
+                    android:text="RANDOM"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/categoryBackButton"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="36dp"
+                    android:background="@drawable/curved_button"
+                    android:drawableLeft="@drawable/ic_back"
+                    android:fontFamily="@font/finger_paint"
+                    android:padding="8dp"
+                    android:text="@string/back"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
